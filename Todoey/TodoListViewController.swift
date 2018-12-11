@@ -42,27 +42,21 @@ class TodoListViewController: UITableViewController {
     //MARK - Add New Items
 
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
-//        var textField = UITextField()
-//        let alert = UIAlertController(title: "Add New Todoey Item", message: "", preferredStyle: .alert)
-//
-//        let action = UIAlertAction(title: "Add Item", style: .default) { (action) in
-//            // what will happend once the user clicks the add item butotn on our UIAlert
-//            self.itemArray.append(textField.text!)
-//            self.tableView.reloadData()
-//        }
-//
-//        alert.addTextField { (alertTextField) in
-//            alertTextField.placeholder = "Create new item"
-//            textField = alertTextField
-//        }
-//        alert.addAction(action)
-//        self.present(alert, animated: true, completion: nil)
-        let alert = UIAlertController(title: "Did you bring your towel?", message: "It's recommended you bring your towel before continuing.", preferredStyle: .alert)
-        
-        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: nil))
-        alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
-        
-        self.present(alert, animated: true)
+        var textField = UITextField()
+        let alert = UIAlertController(title: "Add New Todoey Item", message: "", preferredStyle: .alert)
+
+        let action = UIAlertAction(title: "Add Item", style: .default) { (action) in
+            // what will happend once the user clicks the add item butotn on our UIAlert
+            self.itemArray.append(textField.text!)
+            self.tableView.reloadData()
+        }
+
+        alert.addTextField { (alertTextField) in
+            alertTextField.placeholder = "Create new item"
+            textField = alertTextField
+        }
+        alert.addAction(action)
+        self.present(alert, animated: true, completion: nil)
     }
     
 }
